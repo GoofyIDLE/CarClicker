@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically and horizontally */
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.car-container {
+  margin-bottom: 20px;
+  position: relative; /* Position cursor elements relative to the car container */
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+#car {
+  width: 150px;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+#car.clicked {
+  animation: jump 0.5s;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+#goldenEngineImg {
+  width: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#goldenEngine {
+  position: absolute;
+}
+
+.click-feedback {
+  position: absolute;
+  color: green;
+  font-size: 16px;
+  pointer-events: none; /* Ignore clicks on the feedback element */
+}
+
+.upgrades {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.upgrades h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #555;
+}
+
+.upgrades ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.upgrades li {
+  margin-bottom: 10px;
+}
+
+.upgrades button {
+  font-size: 16px;
+  background-color: #f8d847; /* Yellow */
+  color: #333;
+}
+
+.upgrades button:hover {
+  background-color: #f3c500; /* Darker Yellow */
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
